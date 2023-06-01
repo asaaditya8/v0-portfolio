@@ -1,7 +1,7 @@
 import { useArrayState } from 'rooks';
 import {project_data} from './Data'
 import ChipButton from './ChipButton';
-import Description from './Description';
+import DescriptionCard from './Description';
 
 
 type ChipButtonContainerProps = {
@@ -36,7 +36,7 @@ const DescriptionContainer = (props: DescriptionContainerProps) => {
         <div className='description-container'>
             {
                 descriptionList.map((key) => (
-                    <Description id={key} onCross={onCross} />
+                    <DescriptionCard id={key} onCross={onCross} />
                 )).reverse()
             }
         </div>

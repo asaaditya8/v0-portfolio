@@ -11,7 +11,7 @@ const ChipButton = (props: ChipButtonProps) => {
 
     return (
         <button className='chip_button' onClick={() => onClick(key)}>
-            {project_data[key].name}
+            {project_data[key].role}⋅{project_data[key].name}
         </button>
     )
 }
