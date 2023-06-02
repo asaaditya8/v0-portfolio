@@ -1,6 +1,6 @@
 import pnbUrl from '../../assets/pnb_metlife.svg';
 import e314Url from '../../assets/314e.png';
-import crioLightUrl from '../../assets/crio.svg';
+import crioLightUrl from '../../assets/crioLight.svg';
 import crioDarkUrl from '../../assets/crioDark.svg';
 
 type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, description: string, duration: string};
@@ -36,7 +36,7 @@ export const project_data: { [key: string]: ProjectData } = {
         role: 'Backend Developer',
         logo_light: e314Url,
         logo_dark: e314Url,
-        description: 'Arcade Game created using PyGame',
+        description: "• Experience with Rust, gRPC, RocksDB, TCP, HTTP, TOML, Iterface, Generics, RwLock, Mutex, Arc. • Increased reliability of a proxy written in Rust which does CRUD/Start/Stop for TCP/File/HTTP connections • Experience with attaching the context to error messages as they flow down the stack, generics to reduce code duplication, interfaces to reduce test duplication, abstraction of locks to prevent starvation- related bugs.",
         duration: 'July 2020 - April 2022'
     },
     2: {
@@ -45,7 +45,7 @@ export const project_data: { [key: string]: ProjectData } = {
         role: 'Data Engineer',
         logo_light: e314Url,
         logo_dark: e314Url,
-        description: 'Arcade Game created using PyGame',
+        description: "• Experience with Azure Data Factory, Pandas, ETL, PySpark, SQL, HTML. • Worked on Debugging ADF Pipelines using Pandas, adding Data Val- idation, generating Summary Reports, Scheduling Pipeline Runs and Completion Email Notifications • Worked on ETL of EHR data from Legacy Systems to Datalake, using Python and PySpark",
         duration: 'July 2020 - April 2022'
     },
     3: {
@@ -54,7 +54,7 @@ export const project_data: { [key: string]: ProjectData } = {
         role: 'Student Developer',
         logo_light: crioLightUrl,
         logo_dark: crioDarkUrl,
-        description: 'Wildfire Detection on Satellite Images using Pytorch and Flask',
+        description: "The program consisted of 3 Micro-Experiences (Internship-like Scenarios) that we had complete in the span of 3 weeks. The program consisted of projects that help in developing different skills like Shell Scripting, REST API's, Data Structures & Algorithms, etc.",
         duration: 'March 2019 - April 2019'
     },
     4: {
@@ -63,7 +63,7 @@ export const project_data: { [key: string]: ProjectData } = {
         role: 'ML Engineer',
         logo_light: pnbUrl,
         logo_dark: pnbUrl,
-        description: 'Open Source Contribution on Moran V2',
+        description: '• Exposure: OpenCV, Tensorflow, Pytorch, Shapely, Flask and Docker. • Developed an Aadhaar Masking Pipeline without using cloud services, taking inspirations from Microsoft and Dropbox OCR. Achieved 72% accuracy. • Worked on pruning pre-trained deep learning model to run on low- end hardware.',
         duration: 'May 2018 - July 2018'
     },
 };

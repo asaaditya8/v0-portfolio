@@ -10,13 +10,6 @@ const DescriptionCard = (props: DescriptionCardProps) => {
     const { id: key, onCross} = props;
     const isDark = useMediaMatch('(prefers-color-scheme: dark)');
     
-    let logo;
-    if (isDark) {
-        logo = <img src={project_data[key].logo_dark} width='40em' style={{shapeOutside: 'circle(50%)'}}></img>
-    } else {
-        logo = <img src={project_data[key].logo_light} width='40em' style={{shapeOutside: 'circle(50%)'}}></img>
-    };
-    
     return (
         <div className="description">
         <div className='sidebar'>
@@ -28,11 +21,12 @@ const DescriptionCard = (props: DescriptionCardProps) => {
         <div className='content'>
 
             <div className='header'>
-                <div className='title' style={{textAlign: 'right', paddingRight: '0.4em'}}>{project_data[key].name}</div>
+                <div className='title' style={{textAlign: 'right', paddingRight: '1em'}}>{project_data[key].name}</div>
                 <div>
-                    {logo}
+                    <img src={isDark ? project_data[key].logo_dark : project_data[key].logo_light} width='40em' style={{shapeOutside: 'circle(50%)'}}></img>
+
                 </div>
-                <div className='title' style={{paddingLeft: '0.4em'}}>{project_data[key].role}</div>
+                <div className='title' style={{paddingLeft: '1em'}}>{project_data[key].role}</div>
             </div>
             <div className='desc'>{project_data[key].description}</div>
         </div>

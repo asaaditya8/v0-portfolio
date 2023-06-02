@@ -89,11 +89,11 @@
 }
 
 .description .header {
-  /* display: grid; */
-  /* grid: auto-flow dense / 1fr 1fr 1fr; */
-  display: flex;
+  display: grid;
+  grid: auto-flow dense / 6fr 2.7em 6fr;
+  /* /* display: flex; */
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */ 
 }
 
 .description .title {
