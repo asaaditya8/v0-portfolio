@@ -98,10 +98,12 @@
 
 .description .title {
   margin: 0;
+  font-size: larger;
+  color: #fff;
 }
 
 .description .desc {
-  color: #bebebe;
+  color: #9c9c9c;
 }
 
 .description .close{
