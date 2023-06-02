@@ -23,7 +23,7 @@ const DescriptionCard = (props: DescriptionCardProps) => {
             <div className='header'>
                 <div className='title' style={{textAlign: 'right', paddingRight: '1em'}}>{project_data[key].name}</div>
                 <div>
-                    <img src={isDark ? project_data[key].logo_dark : project_data[key].logo_light} width='40em' style={{shapeOutside: 'circle(50%)'}}></img>
+                    <img src={isDark ? project_data[key].logo_dark : project_data[key].logo_light} width='40em'></img>
 
                 </div>
                 <div className='title' style={{paddingLeft: '1em'}}>{project_data[key].role}</div>

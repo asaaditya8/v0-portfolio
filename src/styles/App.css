@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 2rem;
   /* text-align: center; */
@@ -49,7 +49,6 @@
 
 .experience {
   min-height: 100vh;
-  width: 80vw;
 }
 
 .description-container {
@@ -64,6 +63,7 @@
   flex-direction: row;
   margin: 0;
   width: fit-content;
+  min-height: 80vh;
 }
 
 
@@ -129,6 +129,7 @@
   border-radius: 30px;
   border: 1px solid transparent;
   min-width: 13em;
+  height: fit-content;
   /* max-width: fit-content; */
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -165,8 +166,9 @@
 
 .chip-button-container {
   display: grid;
-  grid: auto-flow dense / repeat(auto-fill, max(13em, 20%));
+  grid: auto-flow dense / repeat(auto-fill, max(13em, 24%));
   column-gap: 0.9em;
   row-gap: 0;
-  min-height: 4.8em;
+  min-height: 6.1em;
+  min-width: 80vw;
 }
