@@ -82,10 +82,17 @@
   padding:  1.5em;
   border: solid 1px #646464;
   border-radius: 1em;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .description .content:hover {
   border: solid 1px #b6b6b6;
+}
+
+.description .content .bg {
+  z-index: -1;
+  /* background-image: url('../../assets/aadhar-roll.png'); */
 }
 
 .description .header {
@@ -103,7 +110,9 @@
 }
 
 .description .desc {
-  color: #9c9c9c;
+  color: #e0e0e0;
+  /* margin-right: 60%; */
+  /* margin-bottom: 50%; */
 }
 
 .description .close{
@@ -159,8 +168,11 @@
   .chip_button:hover {
     border-color: #1a6ce7;
   }
+  .description .title {
+    color: black;
+  }
   .description .desc {
-    color: #383838;
+    color: #1a1a1a;
   }
 }
 
