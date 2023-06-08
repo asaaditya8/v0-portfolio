@@ -1,9 +1,14 @@
-import pnbUrl from '../../assets/pnb_metlife.svg';
-import e314Url from '../../assets/314e.png';
-import crioLightUrl from '../../assets/crioLight.svg';
-import crioDarkUrl from '../../assets/crioDark.svg';
+import pnbLogoUrl from '../../assets/pnb_metlife.svg';
+import e314LogoUrl from '../../assets/314e.png';
+import crioLightLogoUrl from '../../assets/crioLight.svg';
+import crioDarkLogoUrl from '../../assets/crioDark.svg';
+import crioCoverUrl from '../../assets/crio-cover.png';
+import e314DataCoverUrl from '../../assets/314e-dataeng.png';
+import e314ProxyCoverUrl from '../../assets/314e-proxy.png';
+import e314ProxyDarkCoverUrl from '../../assets/314e-proxy-dark.png';
+import pnbCoverUrl from '../../assets/aadhar-roll.png'
 
-type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, description: string, duration: string};
+type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: string, duration: string};
 
 // export const project_data: { [key: string]: ProjectData } = {
 //     1: {
@@ -34,8 +39,10 @@ export const project_data: { [key: string]: ProjectData } = {
         id: '1',
         name: '314e Corporation',
         role: 'Backend Developer',
-        logo_light: e314Url,
-        logo_dark: e314Url,
+        logo_light: e314LogoUrl,
+        logo_dark: e314LogoUrl,
+        cover_light: e314ProxyCoverUrl,
+        cover_dark: e314ProxyDarkCoverUrl,
         description: "• Experience with Rust, gRPC, RocksDB, TCP, HTTP, TOML, Iterface, Generics, RwLock, Mutex, Arc. • Increased reliability of a proxy written in Rust which does CRUD/Start/Stop for TCP/File/HTTP connections • Experience with attaching the context to error messages as they flow down the stack, generics to reduce code duplication, interfaces to reduce test duplication, abstraction of locks to prevent starvation- related bugs.",
         duration: 'July 2020 - April 2022'
     },
@@ -43,8 +50,10 @@ export const project_data: { [key: string]: ProjectData } = {
         id: '2',
         name: '314e Corporation',
         role: 'Data Engineer',
-        logo_light: e314Url,
-        logo_dark: e314Url,
+        logo_light: e314LogoUrl,
+        logo_dark: e314LogoUrl,
+        cover_light: e314DataCoverUrl,
+        cover_dark: e314DataCoverUrl,
         description: "• Experience with Azure Data Factory, Pandas, ETL, PySpark, SQL, HTML. • Worked on Debugging ADF Pipelines using Pandas, adding Data Val- idation, generating Summary Reports, Scheduling Pipeline Runs and Completion Email Notifications • Worked on ETL of EHR data from Legacy Systems to Datalake, using Python and PySpark",
         duration: 'July 2020 - April 2022'
     },
@@ -52,8 +61,10 @@ export const project_data: { [key: string]: ProjectData } = {
         id: '3',
         name: 'Crio.do',
         role: 'Student Developer',
-        logo_light: crioLightUrl,
-        logo_dark: crioDarkUrl,
+        logo_light: crioLightLogoUrl,
+        logo_dark: crioDarkLogoUrl,
+        cover_light: crioCoverUrl,
+        cover_dark: crioCoverUrl,
         description: "The program consisted of 3 Micro-Experiences (Internship-like Scenarios) that we had complete in the span of 3 weeks. The program consisted of projects that help in developing different skills like Shell Scripting, REST API's, Data Structures & Algorithms, etc.",
         duration: 'March 2019 - April 2019'
     },
@@ -61,8 +72,10 @@ export const project_data: { [key: string]: ProjectData } = {
         id: '4',
         name: 'PNB Metlife',
         role: 'ML Engineer',
-        logo_light: pnbUrl,
-        logo_dark: pnbUrl,
+        logo_light: pnbLogoUrl,
+        logo_dark: pnbLogoUrl,
+        cover_light: pnbCoverUrl,
+        cover_dark: pnbCoverUrl,
         description: '• Exposure: OpenCV, Tensorflow, Pytorch, Shapely, Flask and Docker. • Developed an Aadhaar Masking Pipeline without using cloud services, taking inspirations from Microsoft and Dropbox OCR. Achieved 72% accuracy. • Worked on pruning pre-trained deep learning model to run on low- end hardware.',
         duration: 'May 2018 - July 2018'
     },

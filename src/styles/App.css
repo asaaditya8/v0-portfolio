@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   /* text-align: center; */
+
 }
 
 .logo {
@@ -78,10 +79,13 @@
 .description .content {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin-top: 1.5rem;
-  padding:  1.5em;
-  border: solid 1px #646464;
+  padding-top:  1em;
+  padding-bottom: 1em;
+  border: solid 1px var(--bg-gray);
   border-radius: 1em;
+
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -90,17 +94,12 @@
   border: solid 1px #b6b6b6;
 }
 
-.description .content .bg {
-  z-index: -1;
-  /* background-image: url('../../assets/aadhar-roll.png'); */
-}
-
 .description .header {
   display: grid;
   grid: auto-flow dense / 6fr 2.7em 6fr;
-  /* /* display: flex; */
   align-items: center;
-  /* justify-content: center; */ 
+  padding: 1em 0;
+  transition: 100ms;
 }
 
 .description .title {
@@ -111,8 +110,8 @@
 
 .description .desc {
   color: #e0e0e0;
-  /* margin-right: 60%; */
-  /* margin-bottom: 50%; */
+  padding:  0 1.5em;
+  transition: 100ms;
 }
 
 .description .close{
@@ -132,6 +131,16 @@
 .description .close:hover {
   color: #ffffff;
   background: radial-gradient(circle at center, red 0%, #ffa0a0 100%);
+}
+
+.description .read {
+  clip-path: circle(50%);
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 1rem;
+  max-width: 1rem;
+  min-height: 1rem;
 }
 
 .chip_button {
@@ -173,6 +182,12 @@
   }
   .description .desc {
     color: #1a1a1a;
+  }
+  .description .content {
+    border: solid 1px var(--bg-white);
+  }
+  .description .content:hover {
+    border: solid 1px #1a6ce7;
   }
 }
 
