@@ -53,8 +53,12 @@ const TempBars = (props: any) => {
     const { title } = props;
     return (
         <div className='table2'>
-            <div className='sidebar'>{title}</div>
-            <div className='chip-button-container'></div>
+            <div className='sidebar'>
+                <div className='timer'></div>
+                <div style={{padding: '1em'}}>{title}</div>
+            </div>
+            <div className='chip-button-container'>
+            </div>
         </div>
     )
 }

@@ -160,6 +160,8 @@
 }
 
 .table2 .sidebar {
+  display: flex;
+  align-items: center;
   padding: 0 1em;
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
@@ -167,6 +169,14 @@
   font-size: large;
   font-weight: 800;
 }
+.timer {
+  width:0.8rem;
+  height:0.8rem; 
+  border:.3em  solid transparent;
+  border-radius:50%;
+  background:linear-gradient(#0a0a0a, #0a0a0a) content-box no-repeat,
+             conic-gradient(red 24%, 0, transparent ) border-box;
+  }
 
 
 .chip_button {
