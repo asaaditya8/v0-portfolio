@@ -19,7 +19,7 @@ const DescriptionCard = (props: DescriptionCardProps) => {
         <div className="description">
         <div className='sidebar'>
             
-            <button className='close' onClick={() => onCross(key)}>
+            <button className='close' onClick={() => {onCross(key)}}>
                 X
             </button>
             <button className='read' onClick={() => setHover(!inHover)}>

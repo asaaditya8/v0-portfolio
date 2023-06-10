@@ -6,8 +6,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
-  --bg-gray:  #242424;
-  --bg-white: #ffffff;
+  --bg-gray:  #272727;
+  --bg-white: #fafafa;
 
   background-color: var(--bg-gray);
 

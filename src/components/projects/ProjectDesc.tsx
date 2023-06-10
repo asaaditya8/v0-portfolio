@@ -1,5 +1,5 @@
 import { useArrayState } from 'rooks';
-import {project_data} from './Data'
+import { project_data } from './Data'
 import ChipButton from './ChipButton';
 import DescriptionCard from './Description';
 
@@ -12,14 +12,19 @@ type ChipButtonContainerProps = {
 const ChipButtonContainer = (props: ChipButtonContainerProps) => {
     const { buttonList, onClick } = props;
     return (
-        <div className='chip-button-container'>
-            {
-                buttonList.map
-                    ((key) => (
-                        <ChipButton id={key} onClick={onClick} />
-                    ))
+        <div className='table2'>
+            <div className='sidebar'>
+                Experience
+            </div>
+            <div className='chip-button-container'>
+                {
+                    buttonList.map
+                        ((key) => (
+                            <ChipButton id={key} onClick={onClick} />
+                        ))
 
-            }
+                }
+            </div>
         </div>
     )
 }
