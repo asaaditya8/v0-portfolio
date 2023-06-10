@@ -1,5 +1,5 @@
 import { useArrayState } from 'rooks';
-import { project_data } from './Data'
+import { project_data as experience_data } from './Data'
 import ChipButton from './ChipButton';
 import DescriptionCard from './Description';
 
@@ -49,8 +49,18 @@ const DescriptionContainer = (props: DescriptionContainerProps) => {
     )
 }
 
-function ProjectDesc() {
-    const [button_list, button_controls] = useArrayState<string>(Object.keys(project_data));
+const TempBars = (props: any) => {
+    const { title } = props;
+    return (
+        <div className='table2'>
+            <div className='sidebar'>{title}</div>
+            <div className='chip-button-container'></div>
+        </div>
+    )
+}
+
+const AppDesc = () => {
+    const [button_list, button_controls] = useArrayState<string>(Object.keys(experience_data));
     const [item_list, item_controls] = useArrayState<string>([]);
 
     const button_click = (key: string) => {
@@ -62,12 +72,26 @@ function ProjectDesc() {
         item_controls.setArray(item_list.filter((v) => v != key))
     };
 
+
     return (
-        <div className='experience'>
-            <ChipButtonContainer buttonList={button_list} onClick={button_click} />
-            <DescriptionContainer descriptionList={item_list} onCross={cross_button_click} />
+        <div>
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+                <a style={{margin: '1em'}}>About</a>
+                <a style={{margin: '1em'}}>Experience</a>
+                <a style={{margin: '1em'}}>Achievements</a>
+                <a style={{margin: '1em'}}>Projects</a>
+                <a style={{margin: '1em'}}>Education</a>
+            </div>
+            <div className='experience'>
+                <TempBars title={'Education'} />
+                <TempBars title={'Achievements'} />
+                <TempBars title={'Projects'} />
+                <ChipButtonContainer buttonList={button_list} onClick={button_click} />
+                <DescriptionContainer descriptionList={item_list} onCross={cross_button_click} />
+            </div>
         </div>
     )
 }
 
-export default ProjectDesc
+
+export default AppDesc

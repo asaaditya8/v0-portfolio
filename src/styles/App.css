@@ -62,10 +62,11 @@
 }
 
 .description {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid: auto-flow dense / 2em 1fr;
+  /* display: flex;
+  flex-direction: row; */
   margin: 0;
-  width: fit-content;
   min-height: 80vh;
 }
 
@@ -82,6 +83,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  /* min-width: 100%; */
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border: solid 1px var(--bg-gray);

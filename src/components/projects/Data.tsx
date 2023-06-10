@@ -8,7 +8,55 @@ import e314ProxyCoverUrl from '../../assets/314e-proxy.png';
 import e314ProxyDarkCoverUrl from '../../assets/314e-proxy-dark.png';
 import pnbCoverUrl from '../../assets/aadhar-roll.png'
 
-type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: string, duration: string};
+type gotoPageType = (key: string) => void;
+type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: { [key: string]: React.FC<gotoPageType> }, duration: string };
+
+const OpenCV = (gotoPage: gotoPageType) => {
+    return (<>
+        <div>Page2</div>
+    </>)
+}
+
+
+const crioExperience = (gotoPage: gotoPageType) => {
+    return (
+        <div>
+            The program consisted of 3 Micro-Experiences (Internship-like Scenarios) that we had complete in the span of 3 weeks. The program consisted of projects that help in developing different skills like Shell Scripting, REST API's, Data Structures & Algorithms, etc.
+        </div>
+    )
+}
+
+const e314DataExperience = (gotoPage: gotoPageType) => {
+    return (
+        <div>
+            • Experience with Azure Data Factory, Pandas, ETL, PySpark, SQL, HTML. • Worked on Debugging ADF Pipelines using Pandas, adding Data Val- idation, generating Summary Reports, Scheduling Pipeline Runs and Completion Email Notifications • Worked on ETL of EHR data from Legacy Systems to Datalake, using Python and PySpark
+        </div>
+    )
+};
+
+const e314BackendExperience = (gotoPage: gotoPageType) => {
+    return (
+        <div>
+            • Experience with Rust, gRPC, RocksDB, TCP, HTTP, TOML, Iterface, Generics, RwLock, Mutex, Arc. • Increased reliability of a proxy written in Rust which does CRUD/Start/Stop for TCP/File/HTTP connections • Experience with attaching the context to error messages as they flow down the stack, generics to reduce code duplication, interfaces to reduce test duplication, abstraction of locks to prevent starvation- related bugs.
+        </div>
+    )
+}
+
+const MetlifeExperience = (gotoPage: gotoPageType) => {
+    return (
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+            <div>
+                • Exposure: <a onClick={() => gotoPage('OpenCV')}>OpenCV</a>, Tensorflow, Pytorch, Shapely, Flask and Docker.
+            </div>
+            <div>
+                • Developed an Aadhaar Masking Pipeline without using cloud services, taking inspirations from Microsoft and Dropbox OCR. Achieved 72% accuracy.
+            </div>
+            <div>
+                • Worked on pruning pre-trained deep learning model to run on low- end hardware.
+            </div>
+        </div>
+    )
+}
 
 // export const project_data: { [key: string]: ProjectData } = {
 //     1: {
@@ -43,7 +91,9 @@ export const project_data: { [key: string]: ProjectData } = {
         logo_dark: e314LogoUrl,
         cover_light: e314ProxyCoverUrl,
         cover_dark: e314ProxyDarkCoverUrl,
-        description: "• Experience with Rust, gRPC, RocksDB, TCP, HTTP, TOML, Iterface, Generics, RwLock, Mutex, Arc. • Increased reliability of a proxy written in Rust which does CRUD/Start/Stop for TCP/File/HTTP connections • Experience with attaching the context to error messages as they flow down the stack, generics to reduce code duplication, interfaces to reduce test duplication, abstraction of locks to prevent starvation- related bugs.",
+        description: {
+            '/': e314BackendExperience,
+        },
         duration: 'July 2020 - April 2022'
     },
     2: {
@@ -54,7 +104,9 @@ export const project_data: { [key: string]: ProjectData } = {
         logo_dark: e314LogoUrl,
         cover_light: e314DataCoverUrl,
         cover_dark: e314DataCoverUrl,
-        description: "• Experience with Azure Data Factory, Pandas, ETL, PySpark, SQL, HTML. • Worked on Debugging ADF Pipelines using Pandas, adding Data Val- idation, generating Summary Reports, Scheduling Pipeline Runs and Completion Email Notifications • Worked on ETL of EHR data from Legacy Systems to Datalake, using Python and PySpark",
+        description: {
+            '/': e314DataExperience,
+        },
         duration: 'July 2020 - April 2022'
     },
     3: {
@@ -65,7 +117,9 @@ export const project_data: { [key: string]: ProjectData } = {
         logo_dark: crioDarkLogoUrl,
         cover_light: crioCoverUrl,
         cover_dark: crioCoverUrl,
-        description: "The program consisted of 3 Micro-Experiences (Internship-like Scenarios) that we had complete in the span of 3 weeks. The program consisted of projects that help in developing different skills like Shell Scripting, REST API's, Data Structures & Algorithms, etc.",
+        description: {
+            '/': crioExperience,
+        },
         duration: 'March 2019 - April 2019'
     },
     4: {
@@ -76,10 +130,14 @@ export const project_data: { [key: string]: ProjectData } = {
         logo_dark: pnbLogoUrl,
         cover_light: pnbCoverUrl,
         cover_dark: pnbCoverUrl,
-        description: '• Exposure: OpenCV, Tensorflow, Pytorch, Shapely, Flask and Docker. • Developed an Aadhaar Masking Pipeline without using cloud services, taking inspirations from Microsoft and Dropbox OCR. Achieved 72% accuracy. • Worked on pruning pre-trained deep learning model to run on low- end hardware.',
+        description: 
+        {
+            '/': MetlifeExperience,
+            'OpenCV': OpenCV
+        },
         duration: 'May 2018 - July 2018'
     },
-};
+}
 
 export const icons = {
     circle: ''
