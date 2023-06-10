@@ -28,7 +28,10 @@ const DescriptionCard = (props: DescriptionCardProps) => {
         </div>
         <div className='content' onMouseEnter={() => setHover(true)}  style={{backgroundImage: `${isDark? darkGrad : lightGrad}, url(${isDark ? project_data[key].cover_dark : project_data[key].cover_light}`}}>
 
-            <div style={{height: '100%', transition: '100ms', backdropFilter: `${inHover ? 'blur(16px)' : 'none'}`}}>
+            <div style={{height: '100%', 
+            transition: '100ms', 
+            borderRadius: '1em',
+            backdropFilter: `${inHover ? 'blur(16px)' : 'none'}`}}>
                 <div className='header' >
                     <div className='title' style={{textAlign: 'right', paddingRight: '1em'}}>{project_data[key].name}</div>
                     <div>
