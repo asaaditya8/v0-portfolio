@@ -9,7 +9,7 @@ import e314ProxyDarkCoverUrl from '../../assets/314e-proxy-dark.png';
 import pnbCoverUrl from '../../assets/aadhar-roll.png'
 
 type gotoPageType = (key: string) => void;
-type ProjectData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: { [key: string]: React.FC<gotoPageType> }, duration: string };
+type ExperienceData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: { [key: string]: React.FC<gotoPageType> }, duration: string };
 
 const OpenCV = (gotoPage: gotoPageType) => {
     return (<>
@@ -82,7 +82,7 @@ const MetlifeExperience = (gotoPage: gotoPageType) => {
 // };
 
 
-export const project_data: { [key: string]: ProjectData } = {
+export const experience_data: { [key: string]: ExperienceData } = {
     1: {
         id: '1',
         name: '314e Corporation',

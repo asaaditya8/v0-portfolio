@@ -112,6 +112,10 @@
   color: #fff;
 }
 
+.description .nav {
+  padding: 0.5em;
+}
+
 .description .desc {
   color: #e0e0e0;
   padding: 0 2em;
@@ -125,6 +129,7 @@
   min-width: 1rem;
   max-width: 1rem;
   min-height: 1rem;
+  margin: 1em 0;
   color: rgba(0, 0, 0, 0);
   font-family: Verdana;
   font-weight: 900;
@@ -140,7 +145,7 @@
 .description .read {
   clip-path: circle(50%);
   border: none;
-  margin: 0;
+  margin: 1em 0;
   padding: 0;
   min-width: 1rem;
   max-width: 1rem;

@@ -1,24 +1,29 @@
 import { useArrayState } from 'rooks';
-import { project_data as experience_data } from './Data'
+import { experience_data as experience_data } from './Data'
 import ChipButton from './ChipButton';
 import DescriptionCard from './Description';
 
 
 type ChipButtonContainerProps = {
+    title: string,
     buttonList: string[],
-    onClick: (key: string) => void
+    onClick: (key: string) => void,
 }
 
 const ChipButtonContainer = (props: ChipButtonContainerProps) => {
-    const { buttonList, onClick } = props;
+    const { title, buttonList, onClick} = props;
+
     return (
         <div className='table2'>
             <div className='sidebar'>
-                Experience
+                <div className='timer'></div>
+                <div style={{padding: '1em'}}>{title}</div>
             </div>
             <div className='chip-button-container'>
                 {
-                    buttonList.map
+                    buttonList
+                    .filter(key => key.split(':')[0] === title)
+                    .map
                         ((key) => (
                             <ChipButton id={key} onClick={onClick} />
                         ))
@@ -64,15 +69,19 @@ const TempBars = (props: any) => {
 }
 
 const AppDesc = () => {
-    const [button_list, button_controls] = useArrayState<string>(Object.keys(experience_data));
+
     const [item_list, item_controls] = useArrayState<string>([]);
+    const [button_list, button_controls] = useArrayState<string>(
+        [...Object.keys(experience_data).map(key => `Experience:${key}`)]
+        );
+    
 
     const button_click = (key: string) => {
         item_controls.push(key)
         button_controls.setArray(button_list.filter((v) => v != key))
     };
     const cross_button_click = (key: string) => {
-        button_controls.push(key)
+        button_controls.push(key);
         item_controls.setArray(item_list.filter((v) => v != key))
     };
 
@@ -87,10 +96,8 @@ const AppDesc = () => {
                 <a style={{margin: '1em'}}>Education</a>
             </div>
             <div className='experience'>
-                <TempBars title={'Education'} />
-                <TempBars title={'Achievements'} />
                 <TempBars title={'Projects'} />
-                <ChipButtonContainer buttonList={button_list} onClick={button_click} />
+                <ChipButtonContainer title={'Experience'} buttonList={button_list} onClick={button_click} />
                 <DescriptionContainer descriptionList={item_list} onCross={cross_button_click} />
             </div>
         </div>
