@@ -17,7 +17,7 @@ const ChipButtonContainer = (props: ChipButtonContainerProps) => {
         <div className='table2'>
             <div className='sidebar'>
                 <div className='timer'></div>
-                <div style={{padding: '1em'}}>{title}</div>
+                <div className='title'>{title}</div>
             </div>
             <div className='chip-button-container'>
                 {
@@ -60,7 +60,7 @@ const TempBars = (props: any) => {
         <div className='table2'>
             <div className='sidebar'>
                 <div className='timer'></div>
-                <div style={{padding: '1em'}}>{title}</div>
+                <div className='title'>{title}</div>
             </div>
             <div className='chip-button-container'>
             </div>
