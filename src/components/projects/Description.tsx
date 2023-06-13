@@ -71,9 +71,9 @@ const BgBlurCard = (OriginalComponent: React.FC<any>, higherProps: any) => {
     // with the toggle button
     const HoverToggleButton = () => {
         return (
-        <button className='read' onClick={() => setHover(!inHover)}>
-            (~)
-        </button>
+            <button className='read' onClick={() => setHover(!inHover)}>
+                (~)
+            </button>
         )
     }
 
@@ -100,26 +100,37 @@ const BgBlurCard = (OriginalComponent: React.FC<any>, higherProps: any) => {
             <div
                 className='content'
                 onMouseEnter={() => setHover(true)}
-                style={{ backgroundImage: backgroundImage }}
             >
 
-                <div style={{
-                    height: '100%',
-                    transition: '100ms',
-                    borderRadius: '1em',
-                    backdropFilter: contentBackdropFilter
-                }}>
-                    <OriginalComponent {...props} />
+                <div className='content-bg' >
+
+                    <div
+                        className='content-img'
+                        style={{ backgroundImage: backgroundImage }}
+                    >
+                        <div style={{
+                            width: '100%',
+                            height: '100%',
+                            transition: '100ms',
+                            borderRadius: '1em',
+                            backdropFilter: contentBackdropFilter
+                        }}>
+                            <OriginalComponent {...props} />
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
         )
     }
-    return {buttons: [HoverToggleButton], Card: NewComponent};
+    return { buttons: [HoverToggleButton], Card: NewComponent };
 }
 
 
 const ExperienceCard = (props: any) => {
-    const {id: key, isDark} = props;
+    const { id: key, isDark } = props;
 
     const darkImgUrl = experience_data[key].cover_dark;
     const lightImgUrl = experience_data[key].cover_light;
@@ -145,9 +156,9 @@ const DescriptionCard = (props: DescriptionCardProps) => {
     const isDark = useMediaMatch('(prefers-color-scheme: dark)');
 
     const pageProps = { id: key, isDark: isDark, descFiler: '' };
-    
-    const {buttons, Card} = ExperienceCard(pageProps);
-    
+
+    const { buttons, Card } = ExperienceCard(pageProps);
+
 
     return (
         <div className="description">
@@ -157,7 +168,7 @@ const DescriptionCard = (props: DescriptionCardProps) => {
                     X
                 </button>
                 {
-                    buttons.map((Button) => 
+                    buttons.map((Button) =>
                         <Button />
                     )
                 }

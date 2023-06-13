@@ -8,6 +8,9 @@
 
   --bg-gray:  #272727;
   --bg-white: #fafafa;
+  --theme-dark-1: #bcd7ff;
+  --theme-dark-2: #92a9d4cc;
+  --theme-dark-3: #04356dcc;
 
   background-color: var(--bg-gray);
 
@@ -28,11 +31,11 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--theme-dark-1);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--theme-dark-1);
   text-decoration: underline;
   text-underline-offset: 6px;
   /* padding-bottom: 10px; */
