@@ -246,8 +246,7 @@
   min-width: 13em;
   /* height: fit-content; */
   /* max-width: fit-content; */
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
   padding: 0.6em 1.2em;
   font-size: 1em;
   /* font-weight: 500; */
@@ -295,6 +294,20 @@
   justify-content: center;
 }
 
+
+@media (max-width: 390px) {
+  .chip-button-container {
+    grid: auto-flow dense / 1fr;
+
+  }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+  .chip-button-container {
+    grid: auto-flow dense / 1fr 1fr;
+
+  }
+}
 @media (max-width: 768px) {
   .navbar {
     display: grid;
@@ -312,10 +325,6 @@
     max-height: none;
   }
 
-  .chip-button-container {
-    grid: auto-flow dense / 1fr 1fr;
-
-  }
 
   .description .content-img {
     background-size: 100%;
