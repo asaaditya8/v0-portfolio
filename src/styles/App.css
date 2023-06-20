@@ -95,20 +95,15 @@
 
 }
 
-.description .content:hover {
-  /* border: solid 1px #b6b6b6; */
-}
-
 
 .description .content::before {
-  --angle: 0deg;
   content: "";
   position: absolute;
   top: calc(-1 * var(--border-width));
   left: calc(-1 * var(--border-width));
   height: calc(100% + var(--border-width) *2);
   width: calc(100% + var(--border-width) *2);
-  background: linear-gradient(90deg, black, var(--theme-dark-3), var(--theme-dark-2), var(--theme-dark-3), black);
+  background: linear-gradient(90deg, var(--bg-gray), var(--theme-dark-3), var(--theme-dark-2), var(--theme-dark-3), var(--bg-gray));
   border-radius: calc(10 * var(--border-width));
   z-index: 0;
   animation: animatedgradient 5s infinite ease-in-out alternate;
@@ -118,7 +113,7 @@
 }
 
 .description .content:hover::before {
-  background: #000;
+  background: var(--bg-gray);
   /* background: var(--theme-dark-2); */
 }
 
@@ -132,18 +127,13 @@
   }
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 30deg;
-  inherits: false;
-}
 
 .description .content-bg {
   width: 100%;
   height: 100%;
   z-index: 1;
   border-radius: calc(10 * var(--border-width));
-  background: #000;
+  background: var(--bg-gray);
 }
 
 .description .content-img {
@@ -152,7 +142,7 @@
   background-repeat: no-repeat;
   background-position: bottom 20% center;
   z-index: 2;
-    background-size: 50%;
+  background-size: 50%;
 
 }
 
@@ -374,7 +364,33 @@
     border: solid 1px var(--bg-white);
   }
 
+  .description .content::before {
+    background: linear-gradient(90deg, var(--bg-white), var(--theme-light-3), var(--theme-light-2), var(--theme-light-3), var(--bg-white));
+    animation: animatedgradient2 5s infinite ease-in-out alternate;
+    -webkit-animation: animatedgradient2 5s infinite ease-in-out alternate;
+    background-size: 300% 100%;
+  }
+
   .description .content:hover {
     border: solid 1px #1a6ce7;
   }
+
+  .description .content:hover::before {
+    background: var(--bg-white);
+  }
+  
+  .description .content-bg {
+    background: var(--bg-white);
+  }
+
+  @keyframes animatedgradient2 {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
 }

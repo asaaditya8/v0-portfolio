@@ -11,6 +11,9 @@
   --theme-dark-1: #bcd7ff;
   --theme-dark-2: #92a9d4cc;
   --theme-dark-3: #04356dcc;
+  --theme-light-1: #4c00ff;
+  --theme-light-2: #5a3cffcc;
+  --theme-light-3: #d5d4ffcc;
 
   background-color: var(--bg-gray);
 
@@ -53,7 +56,10 @@ h1 {
     color: #213547;
     background-color: var(--bg-white);
   }
+  a {
+    color: var(--theme-light-1);
+  }
   a:hover {
-    color: #747bff;
+    color: var(--theme-light-2);
   }
 }
