@@ -11,14 +11,14 @@ import pnbCoverUrl from '../../assets/aadhar-roll.png'
 type gotoPageType = (key: string) => void;
 type ExperienceData = { id: string, name: string, role: string, logo_light: string, logo_dark: string, cover_light: string, cover_dark: string, description: { [key: string]: React.FC<gotoPageType> }, duration: string };
 
-const OpenCV = (gotoPage: gotoPageType) => {
+const OpenCV = (_gotoPage: gotoPageType) => {
     return (<>
         <div>Page2</div>
     </>)
 }
 
 
-const crioExperience = (gotoPage: gotoPageType) => {
+const crioExperience = (_gotoPage: gotoPageType) => {
     return (
         <div>
             The program consisted of 3 Micro-Experiences (Internship-like Scenarios) that we had complete in the span of 3 weeks. The program consisted of projects that help in developing different skills like Shell Scripting, REST API's, Data Structures & Algorithms, etc.
@@ -26,7 +26,7 @@ const crioExperience = (gotoPage: gotoPageType) => {
     )
 }
 
-const e314DataExperience = (gotoPage: gotoPageType) => {
+const e314DataExperience = (_gotoPage: gotoPageType) => {
     return (
         <div>
             • Experience with Azure Data Factory, Pandas, ETL, PySpark, SQL, HTML. • Worked on Debugging ADF Pipelines using Pandas, adding Data Val- idation, generating Summary Reports, Scheduling Pipeline Runs and Completion Email Notifications • Worked on ETL of EHR data from Legacy Systems to Datalake, using Python and PySpark
@@ -34,7 +34,7 @@ const e314DataExperience = (gotoPage: gotoPageType) => {
     )
 };
 
-const e314BackendExperience = (gotoPage: gotoPageType) => {
+const e314BackendExperience = (_gotoPage: gotoPageType) => {
     return (
         <div>
             • Experience with Rust, gRPC, RocksDB, TCP, HTTP, TOML, Iterface, Generics, RwLock, Mutex, Arc. • Increased reliability of a proxy written in Rust which does CRUD/Start/Stop for TCP/File/HTTP connections • Experience with attaching the context to error messages as they flow down the stack, generics to reduce code duplication, interfaces to reduce test duplication, abstraction of locks to prevent starvation- related bugs.
