@@ -11,7 +11,7 @@ type ChipButtonContainerProps = {
 }
 
 const ChipButtonContainer = (props: ChipButtonContainerProps) => {
-    const { title, buttonList, onClick} = props;
+    const { title, buttonList, onClick } = props;
 
     return (
         <div className='table2'>
@@ -19,16 +19,18 @@ const ChipButtonContainer = (props: ChipButtonContainerProps) => {
                 <div className='timer'></div>
                 <div className='title'>{title}</div>
             </div>
+            <div className='content'>
             <div className='chip-button-container'>
                 {
                     buttonList
-                    .filter(key => key.split(':')[0] === title)
-                    .map
+                        .filter(key => key.split(':')[0] === title)
+                        .map
                         ((key) => (
                             <ChipButton id={key} onClick={onClick} />
                         ))
 
                 }
+            </div>
             </div>
         </div>
     )
@@ -62,7 +64,10 @@ const TempBars = (props: any) => {
                 <div className='timer'></div>
                 <div className='title'>{title}</div>
             </div>
-            <div className='chip-button-container'>
+            <div className='content'>
+
+                <div className='chip-button-container'>
+                </div>
             </div>
         </div>
     )
@@ -73,8 +78,8 @@ const AppDesc = () => {
     const [item_list, item_controls] = useArrayState<string>([]);
     const [button_list, button_controls] = useArrayState<string>(
         [...Object.keys(experience_data).map(key => `Experience:${key}`)]
-        );
-    
+    );
+
 
     const button_click = (key: string) => {
         item_controls.push(key)
@@ -88,12 +93,12 @@ const AppDesc = () => {
 
     return (
         <div>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
-                <a style={{margin: '1em'}}>About</a>
-                <a style={{margin: '1em'}}>Experience</a>
-                <a style={{margin: '1em'}}>Achievements</a>
-                <a style={{margin: '1em'}}>Projects</a>
-                <a style={{margin: '1em'}}>Education</a>
+            <div className='navbar'>
+                <a style={{ margin: '1em' }}>About</a>
+                <a style={{ margin: '1em' }}>Experience</a>
+                <a style={{ margin: '1em' }}>Achievements</a>
+                <a style={{ margin: '1em' }}>Projects</a>
+                <a style={{ margin: '1em' }}>Education</a>
             </div>
             <div className='experience'>
                 <TempBars title={'Projects'} />

@@ -115,7 +115,7 @@
   /* background-size: 100% 100%; */
 }
 
-.description .content:hover::before{
+.description .content:hover::before {
   background: #000;
   /* background: var(--theme-dark-2); */
 }
@@ -216,6 +216,7 @@
   /* border: solid 1px #5c5c5c; */
   border-radius: 1em;
   min-width: 80vw;
+  max-width: 80vw;
   background-color: rgba(0, 0, 0, 0.6);
   /* filter: drop-shadow(2px 2px 4px rgb(206, 206, 206)); */
   /* box-shadow: inset 0px 0px 16px  rgb(31, 31, 31); */
@@ -281,14 +282,44 @@
 .chip-button-container {
   display: grid;
   grid: auto-flow dense / repeat(auto-fill, max(13em, 24%));
-  column-gap: 0.9em;
+  column-gap: 0.6em;
   row-gap: 0;
   /* min-height: 6.1em; */
   width: 100%;
   border-left: solid 1px var(--bg-gray);
-  padding: 0.5em 0;
+  /* padding: 0.5em 0; */
   z-index: 2;
   border-radius: calc(10 * var(--border-width));
+}
+
+.table2 .content {
+  position: relative;
+  padding: 0.8em;
+}
+
+.navbar {
+  display: flex; 
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: grid;
+    grid: auto-flow dense / 1fr 1fr;
+    /* display: none; */
+    /* text-align: center; */
+  }
+  .table2 {
+    grid: 1em 1fr / auto-flow dense ;
+  }
+  .chip_button {
+    min-width: 6em;
+    max-height: none;
+  }
+  .chip-button-container {
+    grid: auto-flow dense / 1fr 1fr;
+    
+  }
 }
 
 @media (prefers-color-scheme: light) {
