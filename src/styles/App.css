@@ -109,11 +109,10 @@
   height: calc(100% + var(--border-width) *2);
   width: calc(100% + var(--border-width) *2);
   background: linear-gradient(90deg, black, var(--theme-dark-3), var(--theme-dark-2), var(--theme-dark-3), black);
-  /* background: linear-gradient(60deg, black, green, black); */
   border-radius: calc(10 * var(--border-width));
   z-index: 0;
   animation: animatedgradient 5s infinite ease-in-out alternate;
-  /* -webkit-animation: animatedgradient 5s infinite ease-in-out alternate; */
+  -webkit-animation: animatedgradient 5s infinite ease-in-out alternate;
   /* transition: animatedgradient 5s infinite ease-in-out alternate; */
   background-size: 300% 100%;
 }

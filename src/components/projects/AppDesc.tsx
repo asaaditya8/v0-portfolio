@@ -73,11 +73,6 @@ const TempBars = (props: any) => {
     )
 }
 
-type ItemState = {
-    key: string;
-    blurred: boolean;
-}
-
 const AppDesc = () => {
 
     const [item_list, item_controls] = useArrayState<string>([]);

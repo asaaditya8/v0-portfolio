@@ -27,14 +27,14 @@ const useHistory: HistoryType = (initialPage) => {
 }
 
 const ExperienceBase = (props: any) => {
-    const { id: key, isDark, descFilter } = props;
+    const { id: key, isDark, descFilter, toggleHover } = props;
     const [page_name, pageHistory, goBack, gotoPage] = useHistory('/');
 
     const logoSrc = isDark ? experience_data[key].logo_dark : experience_data[key].logo_light;
 
     return (
         <>
-            <div className='header' >
+            <div className='header' onClick={toggleHover}>
                 <div className='title' style={{ textAlign: 'right', paddingRight: '1em' }}>{experience_data[key].name}</div>
                 <div>
                     <img src={logoSrc} width='40em'></img>
@@ -63,19 +63,15 @@ const ExperienceBase = (props: any) => {
     )
 }
 
-const BgBlurCard = (OriginalComponent: React.FC<any>, higherProps: any) => {
+type BgBlurCardType = (OriginalComponent: React.FC<any>, higherProps: any) => {buttons: React.FC<any>[], Card: React.FC<any>}
+
+const BgBlurCard: BgBlurCardType = (OriginalComponent: React.FC<any>, higherProps: any) => {
     const { isDark, darkImgUrl, lightImgUrl } = higherProps;
     // For blur
     const [inHover, setHover] = useState(false);
     // Hover is not initialized here because it has to be combined
     // with the toggle button
-    const HoverToggleButton = () => {
-        return (
-            <button className='read' onClick={() => setHover(!inHover)}>
-                (~)
-            </button>
-        )
-    }
+    const toggleHover = () => setHover(!inHover);
 
     const NewComponent = (props: any) => {
         // BackDrop depends on Hover
@@ -115,7 +111,7 @@ const BgBlurCard = (OriginalComponent: React.FC<any>, higherProps: any) => {
                             borderRadius: '1em',
                             backdropFilter: contentBackdropFilter
                         }}>
-                            <OriginalComponent {...props} />
+                            <OriginalComponent {...props} toggleHover={toggleHover}/>
                         </div>
 
                     </div>
@@ -125,7 +121,7 @@ const BgBlurCard = (OriginalComponent: React.FC<any>, higherProps: any) => {
             </div>
         )
     }
-    return { buttons: [HoverToggleButton], Card: NewComponent };
+    return { buttons: [], Card: NewComponent };
 }
 
 
