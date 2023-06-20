@@ -108,11 +108,14 @@
   left: calc(-1 * var(--border-width));
   height: calc(100% + var(--border-width) *2);
   width: calc(100% + var(--border-width) *2);
-  background: conic-gradient(from 90deg, black, var(--theme-dark-3), var(--theme-dark-2) var(--angle), var(--theme-dark-3), black);
+  background: linear-gradient(90deg, black, var(--theme-dark-3), var(--theme-dark-2), var(--theme-dark-3), black);
+  /* background: linear-gradient(60deg, black, green, black); */
   border-radius: calc(10 * var(--border-width));
   z-index: 0;
   animation: animatedgradient 5s infinite ease-in-out alternate;
-  /* background-size: 100% 100%; */
+  /* -webkit-animation: animatedgradient 5s infinite ease-in-out alternate; */
+  /* transition: animatedgradient 5s infinite ease-in-out alternate; */
+  background-size: 300% 100%;
 }
 
 .description .content:hover::before {
@@ -121,12 +124,12 @@
 }
 
 @keyframes animatedgradient {
-  from {
-    --angle: 30deg;
+  0% {
+    background-position: 0 0;
   }
 
-  to {
-    --angle: 330deg
+  100% {
+    background-position: 100% 0;
   }
 }
 

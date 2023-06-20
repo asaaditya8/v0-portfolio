@@ -48,7 +48,7 @@ const DescriptionContainer = (props: DescriptionContainerProps) => {
         <div className='description-container'>
             {
                 descriptionList.map((key) => (
-                    <DescriptionCard id={key} onCross={onCross} />
+                    <DescriptionCard id={key} key={key} onCross={onCross} />
                 )).reverse()
             }
         </div>
@@ -71,6 +71,11 @@ const TempBars = (props: any) => {
             </div>
         </div>
     )
+}
+
+type ItemState = {
+    key: string;
+    blurred: boolean;
 }
 
 const AppDesc = () => {
