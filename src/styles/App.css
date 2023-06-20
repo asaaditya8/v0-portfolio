@@ -150,8 +150,9 @@
   height: 100%;
   border-radius: calc(10 * var(--border-width));
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom 20% center;
   z-index: 2;
+    background-size: 50%;
 
 }
 
@@ -300,7 +301,7 @@
 }
 
 .navbar {
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
@@ -311,16 +312,24 @@
     /* display: none; */
     /* text-align: center; */
   }
+
   .table2 {
-    grid: 1em 1fr / auto-flow dense ;
+    grid: 1em 1fr / auto-flow dense;
   }
+
   .chip_button {
     min-width: 6em;
     max-height: none;
   }
+
   .chip-button-container {
     grid: auto-flow dense / 1fr 1fr;
-    
+
+  }
+
+  .description .content-img {
+    background-size: 100%;
+    background-position: center;
   }
 }
 
