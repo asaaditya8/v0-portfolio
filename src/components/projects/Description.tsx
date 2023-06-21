@@ -83,14 +83,10 @@ const BgBlurCard: BgBlurCardType = (OriginalComponent: React.FC<any>, higherProp
         const descFilter = `${inHover ? 'none' : 'blur(4px)'}`;
         props.descFilter = descFilter;
 
-        const darkGrad = 'linear-gradient(to bottom, black, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.8))';
-        const lightGrad = 'linear-gradient(to bottom, rgb(201,212,255), rgba(201,212,255,0.6) 65%, rgba(201,212,255,1))';
-
-
         const bgImageUrl = isDark ? darkImgUrl : lightImgUrl;
 
         // Image depends on color scheme
-        const backgroundImage = `${isDark ? darkGrad : lightGrad}, url(${bgImageUrl})`;
+        const backgroundImage = `url(${bgImageUrl})`;
 
         return (
             <div
@@ -102,14 +98,12 @@ const BgBlurCard: BgBlurCardType = (OriginalComponent: React.FC<any>, higherProp
 
                     <div
                         className='content-img'
-                        style={{ backgroundImage: backgroundImage }}
+                        style={{ backgroundImage }}
                     >
-                        <div style={{
-                            width: '100%',
-                            height: '100%',
-                            transition: '100ms',
-                            borderRadius: '1em',
-                            backdropFilter: contentBackdropFilter
+                        <div 
+                        className='content-grad'
+                        style={{
+                            backdropFilter: contentBackdropFilter,
                         }}>
                             <OriginalComponent {...props} toggleHover={toggleHover}/>
                         </div>

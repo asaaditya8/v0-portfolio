@@ -133,10 +133,12 @@
   height: 100%;
   z-index: 1;
   border-radius: calc(10 * var(--border-width));
-  background: var(--bg-gray);
+  background: black;
 }
 
 .description .content-img {
+  --grad-1: hsl(228, 100%, 95%);
+  --grad-2: hsl(228, 100%, 95%);
   height: 100%;
   border-radius: calc(10 * var(--border-width));
   background-repeat: no-repeat;
@@ -146,6 +148,14 @@
 
 }
 
+.description .content-grad {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(10 * var(--border-width));
+  background: linear-gradient(to bottom, black, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.8));
+  transition: 100ms;
+}
+
 .description .header {
   display: grid;
   grid: auto-flow dense / 6fr 2.7em 6fr;
@@ -153,6 +163,7 @@
   /* margin-top: 1em; */
   padding: 2em 0 1em 0;
   transition: 100ms;
+  border-radius: calc(10 * var(--border-width));
 }
 
 .description .title {
@@ -168,6 +179,7 @@
 .description .desc {
   color: #e0e0e0;
   padding: 0 2em;
+  border-radius: calc(10 * var(--border-width));
   transition: 100ms;
 }
 
@@ -308,6 +320,7 @@
 
   }
 }
+
 @media (max-width: 768px) {
   .navbar {
     display: grid;
@@ -387,9 +400,13 @@
   .description .content:hover::before {
     background: var(--bg-white);
   }
-  
+
   .description .content-bg {
-    background: var(--bg-white);
+    background: white;
+  }
+  
+  .description .content-grad {
+    background: linear-gradient(to bottom, hsl(228, 100%, 95%), rgba(201,212,255,0.6) 65%, hsl(228, 100%, 95%))
   }
 
   @keyframes animatedgradient2 {

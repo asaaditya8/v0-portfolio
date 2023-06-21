@@ -16,7 +16,6 @@ const ChipButtonContainer = (props: ChipButtonContainerProps) => {
     return (
         <div className='table2'>
             <div className='sidebar'>
-                <div className='timer'></div>
                 <div className='title'>{title}</div>
             </div>
             <div className='content'>
@@ -26,7 +25,7 @@ const ChipButtonContainer = (props: ChipButtonContainerProps) => {
                         .filter(key => key.split(':')[0] === title)
                         .map
                         ((key) => (
-                            <ChipButton id={key} onClick={onClick} />
+                            <ChipButton key={key} id={key} onClick={onClick} />
                         ))
 
                 }
@@ -61,7 +60,6 @@ const TempBars = (props: any) => {
     return (
         <div className='table2'>
             <div className='sidebar'>
-                <div className='timer'></div>
                 <div className='title'>{title}</div>
             </div>
             <div className='content'>
