@@ -254,7 +254,7 @@
 
 .chip_button {
   border-radius: 30px;
-  border: 1px solid transparent;
+  border: 1px solid hsl(0, 0%, 36%);
   min-width: 13em;
   /* height: fit-content; */
   /* max-width: fit-content; */
@@ -266,16 +266,18 @@
   /* background-color: rgba(91, 129, 255, 0.25); */
   /* background-color: rgba(121, 142, 274, 0.5); */
   /* background-color: var(--bg-gray); */
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15); */
   /* color: #1a6ce7; */
-  color: rgb(224, 224, 224);
+  color: hsl(0, 0%, 58%);
   cursor: pointer;
   transition: border-color 0.25s;
   /* transform: perspective(1500px) rotateY(-15deg); */
 }
 
 .chip_button:hover {
-  border-color: #70a9ff;
+  background-color: hsla(0, 0%, 76%, 0.25);
+  color: hsl(0, 0%, 91%);
+  border-color: hsl(0, 0%, 50%);
 }
 
 .chip_button:focus,
