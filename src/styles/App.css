@@ -344,12 +344,14 @@
   .description .content-img {
     background-size: 100%;
     background-position: center;
+    color: rgb(121, 142, 274);
   }
 }
 
 @media (prefers-color-scheme: light) {
   .table2 {
-    background-color: rgba(121, 142, 274, 0.1);
+    /* color: rgb(121, 142, 274); */
+    background-color: hsla(0, 0%, 96%);
     /* box-shadow: 2px 2px 4px rgb(54, 62, 105); */
   }
 
@@ -360,16 +362,19 @@
 
   .chip_button {
     /* background-color: #e9f1ff; */
-    background-color: rgba(255, 255, 255, 1);
+    background-color: hsla(231, 100%, 90%, 0.00);
+    border-color: hsla(230, 100%, 80%, 0.45);
     /* background-color: var(--bg-white); */
     /* color: #70a9ff; */
-    color: #0004ff;
+    color: hsl(230, 100%, 63%);
   }
 
   .chip_button:hover {
     /* border-color: #1a6ce7; */
     /* border-color: #5a5a5a; */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: hsla(231, 100%, 90%, 0.25);
+    border-color: hsla(230, 100%, 80%, 0.85);
+    color: hsl(230, 100%, 43%);
   }
 
   .chip-button-container {
@@ -408,7 +413,8 @@
   }
   
   .description .content-grad {
-    background: linear-gradient(to bottom, hsl(228, 100%, 95%), rgba(201,212,255,0.6) 65%, hsl(228, 100%, 95%))
+    /* background: linear-gradient(to bottom, hsl(228, 100%, 95%), rgba(201,212,255,0.6) 65%, hsl(228, 100%, 95%)) */
+    background: linear-gradient(to bottom, hsl(0, 0%, 96%), hsla(0, 0%, 93%, 0.61) 65%, hsl(0, 0%, 96%) );
   }
 
   @keyframes animatedgradient2 {

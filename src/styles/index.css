@@ -43,6 +43,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
   /* padding-bottom: 10px; */
+  cursor: pointer;
 }
 
 h1 {
@@ -54,12 +55,13 @@ h1 {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: var(--bg-white);
+    /* background-color: var(--bg-white); */
+    background-color: hsla(230, 100%, 90%, 0.5);
   }
   a {
-    color: var(--theme-light-1);
+    color: var(--theme-light-2);
   }
   a:hover {
-    color: var(--theme-light-2);
+    color: var(--theme-light-1);
   }
 }
