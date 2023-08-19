@@ -1,4 +1,22 @@
 # Portfolio v0
+Highly experimental design & code.
+
+## Objectives
+1. To implement components by hand in order to grab an understanding.
+2. To test the concept of making a webpage as scroll-free as it can be.
+3. To develop design skills, which were infinitesimally small.
+
+## Why scroll-free
+It just felt to me that scrolling is not needed in the timeline kind of views if new items drop from the top.
+
+### Trigger for new items
+This is subject to research. It has not been explored much.
+
+### Threads
+This is also subject to research.
+#### Approaches
+- [x] Links and Nav bar
+- [ ] Slides
 
 ## 🛠 Installation & Set Up
 
