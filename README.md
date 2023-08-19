@@ -2,9 +2,10 @@
 Highly experimental design & code.
 
 ## Objectives
-1. To implement components by hand in order to grab an understanding.
-2. To test the concept of making a webpage as scroll-free as it can be.
-3. To develop design skills, which were infinitesimally small.
+1. To learn React.js & CSS.
+2. To implement components by hand in order to grab an understanding.
+3. To test the concept of making a webpage as scroll-free as it can be.
+4. To develop design skills, which were infinitesimally small.
 
 ## Why scroll-free
 It just felt to me that scrolling is not needed in the timeline kind of views if new items drop from the top.
